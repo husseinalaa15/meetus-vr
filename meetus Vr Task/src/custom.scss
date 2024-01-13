@@ -1,0 +1,27 @@
+$theme-colors: (
+  'primary':#F9F7F7,
+  'secondary':#DBE2EF,
+  "light":#3F72AF,
+  "dark":#112D4E,
+  'success':#2f8e48,
+  'danger':#8e2f2f,
+  'yellow': #e8d662,
+
+  
+);
+$spacing-values: (
+  'xs': 6px,
+  'sm': 12px,
+  'md': 36px,
+  'lg': 72px
+);
+
+$font-sizes:(
+  'xs':12px,
+  'sm':24px,
+  'md':36px,
+  'lg':42px
+);
+
+
+@import '../node_modules/bootstrap/scss/bootstrap';

@@ -1,0 +1,199 @@
+@import './custom.scss';
+
+
+.main-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: map-get($theme-colors, 'primary');
+}
+
+
+.card{
+  background-color: map-get($theme-colors, 'secondary');
+  padding :map-get($spacing-values, 'md' );
+  border: none;
+  justify-content: center;
+  align-items: center;
+  gap : map-get($spacing-values, 'md' );
+  min-width:350px;
+}
+
+.card .card-title{
+  font-size: map-get($font-sizes, 'sm' );
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:map-get($spacing-values, 'sm' );
+  width:100%;
+
+}
+
+ form input {
+  border : none;
+  border-radius:map-get($spacing-values, 'xs' );
+  padding :map-get($spacing-values, 'xs' );
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+  gap:map-get($spacing-values, 'xs' );
+  width: 100%;
+
+}
+.input-error{
+  color: rgb(179, 76, 76);
+  font-size: map-get($font-sizes,'xs' );
+}
+
+.submit-btn, .custom-modal-btn button{
+  color: map-get($theme-colors, 'primary' );
+  padding:  map-get($spacing-values, 'xs' ) map-get($spacing-values, 'md' );
+}
+.submit-btn {
+  background-color: map-get($theme-colors, 'light');
+
+}
+
+
+
+.custom-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:map-get($spacing-values, 'lg' );
+  padding:  map-get($spacing-values, 'lg' )  map-get($spacing-values, 'md' );
+  background-color: map-get($theme-colors, 'secondary');
+  border-radius:map-get($spacing-values, 'xs' );
+}
+.custom-modal-icon{
+  width: 25%;
+}
+.custom-modal-msg{
+  font-size: map-get($font-sizes, 'sm' );
+}
+
+#page-content-wrapper{
+  background-color: map-get($theme-colors, 'primary');
+  // padding: map-get($spacing-values, 'lg' ) !important;
+}
+.dash-content{
+  padding: map-get($spacing-values, 'sm' );
+  display: flex;
+  justify-content: center;
+ 
+
+}
+.dash-content .row{
+  gap:map-get($spacing-values, 'md' );
+}
+.sidebar{
+  background-color: map-get($theme-colors, 'light');
+  min-height: 100vh;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  
+}
+.sidebar-content {
+
+  padding: map-get($spacing-values, 'sm' );
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap:map-get($spacing-values, 'md' );
+  text-align: center;
+}
+
+.sidebar-content .nav-item{
+  width: 100%;
+
+}
+.sidebar-content .active {
+  background-color: map-get($theme-colors, 'dark');
+  width:  100%;
+  border-radius:map-get($spacing-values, 'xs' );
+} 
+.nav-logo{
+  width: 25px;
+}
+.nav-text , .action-btn button{
+  color: white;
+}
+
+.dashboard-title{
+  font-size: map-get($font-sizes, 'lg' );
+  font-weight: bold;
+}
+
+.action-btn button{
+  background-color: map-get($theme-colors, 'dark');
+
+}
+
+.tasks-content{
+  background-color: map-get($theme-colors, 'secondary');
+  text-align: center;
+  border-radius:map-get($spacing-values, 'xs' );
+  padding: 0 0 ;
+}
+
+.empty-state{
+  padding: map-get($spacing-values, 'md' );
+}
+
+.task-record{
+  display: grid;
+  gap:  map-get($spacing-values, 'md' );
+  justify-content: space-around;
+  padding: map-get($spacing-values, 'sm' );
+  grid-template-columns: 40% 20% 10% 10%;
+
+}
+.task-record:hover{
+  background-color: map-get($theme-colors, 'dark');
+  color: white;
+}
+.edit-task{
+  max-height: min-content;
+  background-color: map-get($theme-colors, 'light');
+  color: white;
+  border: none;
+}
+.delete-task{
+  max-height: min-content;
+  background-color: map-get($theme-colors, 'danger');
+  color:white;
+  border: none;
+}
+.edit-form{
+  gap:  map-get($spacing-values, 'xs' );
+
+}
+.edit-form input{
+  width: 100% ;
+}
+
+@media (max-width: 768px) {
+  .task-record{
+    display: block;
+    padding: map-get($spacing-values, 'sm' );
+    margin-top: 15px;
+  }
+  .sidebar{
+    display: none;
+  }
+  .task-record button {
+    margin: 10px 15px
+  }
+
+}
